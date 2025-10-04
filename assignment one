@@ -1,0 +1,140 @@
+// Dart Assignment: Data Types & Control Flow
+void main() {
+  print('--- 1. Define Variables ---');
+  // Defining variables of various data types
+  int age = 25;
+  double height = 5.9;
+  String name = 'Kevin Kiprotich';
+  bool isStudent = true;
+  List<int> scores = [80, 75, 90, 88];
+
+  print('Name: $name');
+  print('Age: $age');
+  print('Height: $height');
+  print('Is Student: $isStudent');
+  print('Scores: $scores');
+
+  print('\n--- 2. Type Conversion ---');
+  // Type conversion examples
+  String strNum = '42';
+  int numInt = int.parse(strNum);
+  double numDouble = double.parse(strNum);
+
+  int myInt = 25;
+  String intToString = myInt.toString();
+  double intToDouble = myInt.toDouble();
+
+  print('String → int: $numInt');
+  print('String → double: $numDouble');
+  print('int → String: $intToString');
+  print('int → double: $intToDouble');
+
+  print('\n--- 3. Conversion Function ---');
+  convertAndDisplay('100');
+
+  print('\n--- 4. Control Flow ---');
+
+  // If-Else: Check if number is positive, negative, or zero
+  int number = -10;
+  if (number > 0) {
+    print('$number is positive.');
+  } else if (number < 0) {
+    print('$number is negative.');
+  } else {
+    print('The number is zero.');
+  }
+
+  // Verify voting eligibility
+  int userAge = 17;
+  if (userAge >= 18) {
+    print('You are eligible to vote.');
+  } else {
+    print('You are not eligible to vote.');
+  }
+
+  // Switch Case: Print day of the week
+  int day = 3;
+  switch (day) {
+    case 1:
+      print('Monday');
+      break;
+    case 2:
+      print('Tuesday');
+      break;
+    case 3:
+      print('Wednesday');
+      break;
+    case 4:
+      print('Thursday');
+      break;
+    case 5:
+      print('Friday');
+      break;
+    case 6:
+      print('Saturday');
+      break;
+    case 7:
+      print('Sunday');
+      break;
+    default:
+      print('Invalid day!');
+  }
+
+  print('\n--- Loops ---');
+
+  // for loop: Print 1 to 10
+  print('For loop (1 to 10):');
+  for (int i = 1; i <= 10; i++) {
+    print(i);
+  }
+
+  // while loop: Print 10 to 1
+  print('\nWhile loop (10 to 1):');
+  int j = 10;
+  while (j >= 1) {
+    print(j);
+    j--;
+  }
+
+  // do-while loop: Print 1 to 5
+  print('\nDo-while loop (1 to 5):');
+  int k = 1;
+  do {
+    print(k);
+    k++;
+  } while (k <= 5);
+
+  print('\n--- 5. Combine Data & Control Flow ---');
+  List<int> numbers = [3, 12, 45, 102, 7, 99];
+
+  for (var n in numbers) {
+    print('\nNumber: $n');
+
+    // Check even or odd
+    if (n % 2 == 0) {
+      print('$n is even.');
+    } else {
+      print('$n is odd.');
+    }
+
+    // Switch to categorize size
+    switch (n) {
+      case >= 1 && <= 10:
+        print('Category: Small');
+        break;
+      case >= 11 && <= 100:
+        print('Category: Medium');
+        break;
+      default:
+        print('Category: Large');
+    }
+  }
+}
+
+// Function for part 3
+void convertAndDisplay(String number) {
+  int intValue = int.parse(number);
+  double doubleValue = double.parse(number);
+  print('Converted int: $intValue');
+  print('Converted double: $doubleValue');
+}
